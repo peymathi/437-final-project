@@ -8,3 +8,5 @@ All work for this project will be carried out by one student. There are five pha
 - Testing : 2 days
 
 For time's sake, Godot learning and top level design will occur consecutively. 
+
+Unfortunately, I had covid throughout all of this so I did not get to dedicate as much time to this project as I would have hoped. I've been bed ridden for about the last week and I am just now getting to work on this project with only 6 days remaining.
