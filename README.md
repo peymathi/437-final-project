@@ -4,7 +4,9 @@ This repo contains the final project for the CSCI 437 Intro to 3D Graphics cours
 
 ### Running and Playing the Game
 
-Download the executable for your platform from the builds folder. Builds have been made for Windows Desktop, MacOSX, and Linux/X11. To play the game, click on the ball with the mouse and drag away from the ball. This will create an arrow showing the trajectory for the ball. On release, you will hit the ball in the direction of the arrow.
+Download the files for your platform from the builds folder. Builds have been made for Windows Desktop, MacOSX, and Linux/X11. For Windows: Download PeytonMathisWindows.exe, PeytonMathisWindows.pck, and libgitapi.dll. For Linux: Download PeytonMathisLinux.x86_64 and PeytonMathisLinux.pck. For MacOSX: Download PeytonMathisMacOSX.zip. Put all of the downloaded files in the same directory and run the respective executable. 
+
+To play the game, click on the ball with the mouse and drag away from the ball. This will create an arrow showing the trajectory for the ball. On release, you will hit the ball in the direction of the arrow.
 
 ### DevelopmentPlan.md
 
