@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="437-final-project"
+run/main_scene="res://Main.tscn"
 config/icon="res://assets/golf.png"
 
 [gdnative]
