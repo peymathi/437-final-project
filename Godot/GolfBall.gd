@@ -26,8 +26,9 @@ func _mouse_exited():
 	
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and self.mouse_inside:
-		self.stroke = true
-		self.arrow_sprite.visible = true
+		if self.linear_velocity.x == 0 and self.linear_velocity.y == 0:
+			self.stroke = true
+			self.arrow_sprite.visible = true
 	
 	# Remove arrow and hit the ball
 	elif event is InputEventMouseButton and not event.is_pressed():
@@ -43,6 +44,10 @@ func _input(event):
 		
 func _process(delta):
 	
+	# Stop the ball if it is moving slower than 5
+	if self.linear_velocity.length() < 5:
+		self.linear_velocity = Vector2(0, 0)
+		
 	# Update distance and angle for stroke arrow
 	if self.stroke:
 		var mouse_pos = get_viewport().get_mouse_position()
