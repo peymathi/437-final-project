@@ -2,7 +2,9 @@
 
 This repo contains the final project for the CSCI 437 Intro to 3D Graphics course. Everything about the project is described in the docs directory. Each document is explained here.
 
-Live version of the game can be found [here](https://peymathi.github.io/437-final-project/)
+### Running and Playing the Game
+
+Download the executable for your platform from the builds folder. Builds have been made for Windows Desktop, MacOSX, and Linux/X11. To play the game, click on the ball with the mouse and drag away from the ball. This will create an arrow showing the trajectory for the ball. On release, you will hit the ball in the direction of the arrow.
 
 ### DevelopmentPlan.md
 
