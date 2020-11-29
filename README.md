@@ -2,6 +2,8 @@
 
 This repo contains the final project for the CSCI 437 Intro to 3D Graphics course. Everything about the project is described in the docs directory. Each document is explained here.
 
+Live version of the game can be found [here]()
+
 ### DevelopmentPlan.md
 
 This document describes the Software Engineering plan for how the game was developed. It describes the goals and schedule of the development of the game.
