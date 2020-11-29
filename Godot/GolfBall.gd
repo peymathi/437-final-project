@@ -17,7 +17,7 @@ func _ready():
 	self.connect("mouse_exited", self, "_mouse_exited")
 	self.input_pickable = true
 	self.arrow_sprite.visible = false
-	
+
 func _mouse_entered():
 	self.mouse_inside = true
 	
@@ -32,14 +32,19 @@ func _input(event):
 	
 	# Remove arrow and hit the ball
 	elif event is InputEventMouseButton and not event.is_pressed():
-		self.stroke = false
-		self.stroke_magnitude *= 4
-		self.stroke_vector.x *= self.stroke_magnitude
-		self.stroke_vector.y *= self.stroke_magnitude
-		self.apply_central_impulse(self.stroke_vector)
-		self.stroke_vector = Vector2(0, 0)
-		self.stroke_magnitude = 0
-		self.arrow_sprite.visible = false
+		
+		if self.stroke_magnitude / 100 < 0.05:
+			self.stroke = false
+			
+		else:
+			self.stroke = false
+			self.stroke_magnitude *= 10
+			self.stroke_vector.x *= self.stroke_magnitude
+			self.stroke_vector.y *= self.stroke_magnitude
+			self.apply_central_impulse(self.stroke_vector)
+			self.stroke_vector = Vector2(0, 0)
+			self.stroke_magnitude = 0
+			self.arrow_sprite.visible = false
 		
 		
 func _process(delta):
@@ -57,6 +62,17 @@ func _process(delta):
 			self.stroke_magnitude = 100
 		else:
 			self.stroke_magnitude = distance
-			
-		self.arrow_sprite.scale.y = (self.stroke_magnitude / 100)
+		
+		var raw_mag = 0.3 + (self.stroke_magnitude / 100)
+		if raw_mag < 0.35:
+			self.arrow_sprite.visible = false
+		else:
+			self.arrow_sprite.visible = true
+			self.arrow_sprite.scale.y = raw_mag
 		self.arrow_sprite.rotation = mouse_pos.angle_to_point(self.position) - (PI / 2)
+
+
+func _on_Hole_body_entered(body):
+	if body == self:
+		self.visible = false
+		print("It's in the hole!!")

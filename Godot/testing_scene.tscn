@@ -1,15 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GolfBall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://RectangularBumper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GolfGreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hole.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LShapedBumper.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="GolfGreen" parent="." instance=ExtResource( 3 )]
+position = Vector2( 46906.8, 25444.5 )
 
 [node name="GolfBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 111.299, 138.47 )
 
 [node name="RectangularBumper" parent="." instance=ExtResource( 2 )]
-position = Vector2( 144.808, 95.1303 )
+position = Vector2( 336.808, 24.6303 )
+
+[node name="RectangularBumper2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 291.502, 231.352 )
+scale = Vector2( 1.50869, 1.71067 )
+
+[node name="Hole" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256.152, 260.403 )
+scale = Vector2( -1.11713, 1.19792 )
+
+[node name="LShapedBumper" parent="." instance=ExtResource( 5 )]
+position = Vector2( 54.6821, 93.7034 )
+[connection signal="body_entered" from="Hole" to="GolfBall" method="_on_Hole_body_entered"]
