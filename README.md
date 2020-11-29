@@ -22,4 +22,4 @@ This is a State Transition diagram that describes what each state in the game is
 
 ## A Note on Quality
 
-I have been sick in bed with Covid for the last two weeks. I was expecting to get better sooner in order to get some more work done on this project, but unfortunately I have not gotten much better. Needless to say the quality of this project in its current state is not what I would have hoped, but unfortunately it is what it is with me being sick and unable to work on the project. 
+I have been sick in bed with Covid for the last two weeks. I was expecting to get better sooner in order to get some more work done on this project, but unfortunately I have not gotten much better. Needless to say the quality of this project in its current state is not what I would have hoped, but it is what it is with me being sick and unable to work on the project. I definitely plan on adding more to this when I get better and I plan on having a much better final project next semester when I won't be stuck in bed (hopefully).
